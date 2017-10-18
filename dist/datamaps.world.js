@@ -260,7 +260,7 @@
               .attr('data-previousAttributes', JSON.stringify(previousAttributes));
 
             // As per discussion on https://github.com/markmarkoh/datamaps/issues/19
-            if ( ! /((MSIE)|(Trident)|(Edge))/.test(navigator.userAgent) ) {
+            if ( ! /((MSIE)|(Trident))/.test(navigator.userAgent) ) {
              moveToFront.call(this);
             }
           }
@@ -382,9 +382,6 @@
                    case "CHL":
                        originXY = self.latLngToXY(-33.448890, -70.669265);
                        break;
-                   case "HRV":
-                       originXY = self.latLngToXY(45.815011, 15.981919);
-                       break;
                    case "IDN":
                        originXY = self.latLngToXY(-6.208763, 106.845599);
                        break;
@@ -412,14 +409,11 @@
 
             if (typeof datum.destination === 'string') {
               switch (datum.destination) {
-                    case "CAN":
+                     case "CAN":
                         destXY = self.latLngToXY(56.624472, -114.665293);
                         break;
                     case "CHL":
                         destXY = self.latLngToXY(-33.448890, -70.669265);
-                        break;
-                    case "HRV":
-                        destXY = self.latLngToXY(45.815011, 15.981919);
                         break;
                     case "IDN":
                         destXY = self.latLngToXY(-6.208763, 106.845599);
